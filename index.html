@@ -334,16 +334,27 @@
                 <p class="text-gray-500">Nairobi.</p>
                 <div class="mt-10 space-y-4">
                     <p class="text-sm font-bold"><i class="fas fa-envelope text-brand-red mr-3"></i> barmaeenterprise@gmail.com</p>
-                    <p class="text-sm font-bold"><i class="fas fa-phone text-brand-red mr-3"></i> +254 (0) XXX XXX</p>
+                    <p class="text-sm font-bold"><i class="fas fa-phone text-brand-red mr-3"></i> +254 (0) 734 770 710</p>
                 </div>
             </div>
             <div class="lg:w-2/3 bg-[#fcfcfc] p-8 md:p-12 rounded-[40px] border border-gray-100">
-                <form class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                    <input type="text" placeholder="NAME" class="bg-white border border-gray-200 p-4 rounded-xl outline-none focus:border-brand-red transition text-xs font-bold w-full">
-                    <input type="email" placeholder="EMAIL" class="bg-white border border-gray-200 p-4 rounded-xl outline-none focus:border-brand-red transition text-xs font-bold">
-                    <textarea rows="4" placeholder="MESSAGE" class="md:col-span-2 bg-white border border-gray-200 p-4 rounded-xl outline-none focus:border-brand-red transition text-xs font-bold"></textarea>
-                    <button class="md:col-span-2 btn-main py-5 rounded-xl font-black text-sm uppercase w-full">Secure Consultation</button>
-                </form>
+    <form id="contact-form" class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+        
+        <input type="text" name="from_name" placeholder="NAME" required 
+            class="bg-white border border-gray-200 p-4 rounded-xl outline-none focus:border-brand-red transition text-xs font-bold w-full">
+        
+        <input type="email" name="reply_to" placeholder="EMAIL" required 
+            class="bg-white border border-gray-200 p-4 rounded-xl outline-none focus:border-brand-red transition text-xs font-bold">
+        
+        <textarea name="message" rows="4" placeholder="MESSAGE" required 
+            class="md:col-span-2 bg-white border border-gray-200 p-4 rounded-xl outline-none focus:border-brand-red transition text-xs font-bold"></textarea>
+        
+        <button type="submit" id="submit-btn" 
+            class="md:col-span-2 btn-main py-5 rounded-xl font-black text-sm uppercase w-full">
+            Secure Consultation
+        </button>
+    </form>
+</div>
             </div>
         </div>
     </section>
@@ -387,5 +398,44 @@
             </div>
         </div>
     </footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+    (function() {
+    // 1. Paste your Public Key from the Account tab here
+    emailjs.init("eislqc4HHom2Sy7lw"); 
+  })();
+
+  window.onload = function() {
+    const contactForm = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('submit-btn');
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        // Disable button to prevent double-sending
+        submitBtn.innerText = 'SENDING...';
+        submitBtn.disabled = true;
+
+        // 2. Service ID is service_1yxznyg (from your screenshot)
+        // 3. Paste your Template ID here
+        emailjs.sendForm('service_1yxznyg', 'template_wbxe7pe', this)
+          .then(function() {
+            alert('Success! BARMAE ENTERPRISE LTD has received your message.');
+            submitBtn.innerText = 'SECURE CONSULTATION';
+            submitBtn.disabled = false;
+            contactForm.reset(); 
+          }, function(error) {
+            alert('Submission failed. Please check your connection or use WhatsApp.');
+            submitBtn.innerText = 'SECURE CONSULTATION';
+            submitBtn.disabled = false;
+            console.error('EmailJS Error:', error);
+          });
+         });
+     }
+    }
+    </script>
 </body>
 </html>
