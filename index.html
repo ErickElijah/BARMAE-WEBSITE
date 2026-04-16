@@ -3,16 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & META TAGS -->
+    <meta name="description" content="BARMAE ENTERPRISE LTD provides integrated business services including brand marketing, fast logistics, and administrative excellence in Kenya.">
+    <meta name="keywords" content="Logistics Kenya, Brand Marketing Nairobi, Barmae Enterprise, Business Advisory, Delivery Network">
+    <meta name="author" content="BARMAE ENTERPRISE LTD">
+    
+    <!-- OPEN GRAPH TAGS (For beautiful WhatsApp, LinkedIn, and Facebook sharing previews) -->
+    <meta property="og:title" content="BARMAE ENTERPRISE LTD | Marketing & Delivery">
+    <meta property="og:description" content="The Complete Core of Your Business Operations. Precision in Supply, Excellence in Service.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="Assets/logo.png.jpeg"> <!-- Change this to a wider banner image if you prefer -->
+    
+    <!-- FAVICON -->
+    <link rel="icon" type="image/jpeg" href="Assets/logo.png.jpeg">
+
     <title>BARMAE ENTERPRISE LTD | Marketing & Delivery</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        html {
-        scroll-behavior: smooth;
-        }
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap');
         
-        html { scroll-behavior: smooth; }
+        html { 
+            scroll-behavior: smooth; 
+        }
         
         body { 
             font-family: 'Plus Jakarta Sans', sans-serif; 
@@ -33,10 +48,9 @@
         }
 
         .logo-blend {
-            height: 50px; /* Adjusted size */
+            height: 50px; 
             width: auto;
             object-fit: contain;
-            /* Multiply removes white, Contrast/Brightness strips the gray gradient */
             mix-blend-mode: multiply;
             filter: contrast(1.1) brightness(1.1); 
         }
@@ -85,20 +99,21 @@
             background: radial-gradient(circle, rgba(255,0,0,0.03) 0%, rgba(255,255,255,0) 70%);
         }
         .hero-glow {
-        position: absolute;
-        top: 50%;
-        right: -10%;
-        width: 400px;
-        height: 400px;
-        background: radial-gradient(circle, rgba(255,0,0,0.05) 0%, rgba(255,255,255,0) 70%);
-        filter: blur(50px);
-        z-index: -1;
+            position: absolute;
+            top: 50%;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255,0,0,0.05) 0%, rgba(255,255,255,0) 70%);
+            filter: blur(50px);
+            z-index: 0;
         }
     </style>
 </head>
 <body class="bg-white">
 
-    <a href="https://wa.me/254734770710" target="_blank" class="whatsapp-btn">
+    <!-- ACCESSIBILITY FIX: Added aria-label for screen readers -->
+    <a href="https://wa.me/254734770710" target="_blank" rel="noopener noreferrer" class="whatsapp-btn" aria-label="Chat with us on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -110,19 +125,20 @@
             </div>
         </div>
         <div class="hidden lg:flex gap-8 text-sm font-medium text-gray-500">
-            <a href="#home" class="hover:text-brand-red transition">Home</a>
-            <a href="#services" class="hover:text-brand-red transition">Services</a>
+            <a href="#home" class="hover:text-brand-red transition-colors duration-300">Home</a>
+            <a href="#services" class="hover:text-brand-red transition-colors duration-300">Services</a>
             <a href="#why-us" class="hover:text-brand-red transition-colors duration-300">Why Us</a>
-            <a href="#about" class="hover:text-brand-red transition">About Us</a>
-            <a href="#strategy" class="hover:text-brand-red transition">Strategy</a>
-            <a href="#contact" class="hover:text-brand-red transition font-bold text-brand-red">Contact</a>
+            <a href="#about" class="hover:text-brand-red transition-colors duration-300">About Us</a>
+            <a href="#strategy" class="hover:text-brand-red transition-colors duration-300">Strategy</a>
+            <a href="#contact" class="hover:text-brand-red transition-colors duration-300 font-bold text-brand-red">Contact</a>
         </div>
         <a href="#contact" class="hidden sm:block btn-main px-4 py-2 rounded-md text-xs md:text-sm font-bold transition">
-        Book Consultation
-    </a>
+            Book Consultation
+        </a>
     </nav>
 
    <section id="home" class="bg-white text-gray-900 px-6 py-20 lg:px-20 min-h-[60vh] flex items-center relative overflow-hidden red-glow-soft">
+        <div class="hero-glow"></div>
         <div class="max-w-6xl mx-auto relative z-10 w-full">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 
@@ -253,14 +269,13 @@
                 <div class="service-card p-8 md:p-10 rounded-2xl shadow-sm">
                     <i class="fas fa-truck-fast text-brand-red text-2xl mb-6"></i>
                     <h3 class="font-extrabold text-gray-900 text-lg mb-4 uppercase">Logistics</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Connecting your products to customers via an agile delivery network, specialized in rapid last-mile logistics and efficient urban distribution</p>
-                    
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Connecting your products to customers via an agile delivery network, specialized in rapid last-mile logistics and efficient urban distribution.</p>
                 </div>
 
                 <div class="service-card p-8 md:p-10 rounded-2xl shadow-sm">
                     <i class="fas fa-users-gear text-brand-red text-2xl mb-6"></i>
-                    <h3 class="font-extrabold text-gray-900 text-lg mb-4 uppercase">HELP WITH A THIRD SERVICE WE WILL PROVIDE</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Mletee maoni tafadhali😂</p>
+                    <h3 class="font-extrabold text-gray-900 text-lg mb-4 uppercase">Business Advisory</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Professional administrative management, procurement standards, and strategic business consulting to streamline operations.</p>
                 </div>
 
             </div> 
@@ -287,41 +302,41 @@
                             </div>
                             <div>
                                 <h4 class="font-bold text-gray-900 uppercase text-sm">Vetted Quality Assurance</h4>
-                             <p class="text-[11px] text-gray-400 mt-1 uppercase font-bold">Strict Procurement Standards</p>
+                                <p class="text-[11px] text-gray-400 mt-1 uppercase font-bold">Strict Procurement Standards</p>
+                            </div>
                         </div>
-                    </div>
                     
-                    <div class="flex gap-4">
-                        <div class="flex-shrink-0 w-12 h-12 bg-red-50 rounded-full flex items-center justify-center text-brand-red">
-                            <i class="fas fa-clock text-xl"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-gray-900 uppercase text-sm">Turnaround Efficiency</h4>
-                            <p class="text-[11px] text-gray-400 mt-1 uppercase font-bold">Logistics Optimized for Speed</p>
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-red-50 rounded-full flex items-center justify-center text-brand-red">
+                                <i class="fas fa-clock text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 uppercase text-sm">Turnaround Efficiency</h4>
+                                <p class="text-[11px] text-gray-400 mt-1 uppercase font-bold">Logistics Optimized for Speed</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="relative">
-                <div class="grid gap-4">
-                    <div class="bg-[#fafafa] p-8 rounded-2xl border border-gray-100 relative overflow-hidden group hover:border-brand-red transition-all">
-                        <span class="text-5xl font-black text-gray-200/50 absolute right-4 -bottom-2 group-hover:text-brand-red/10 transition-all">01</span>
-                        <h4 class="font-black text-gray-900 text-lg mb-2 uppercase">Financial Integrity</h4>
-                        <p class="text-sm text-gray-500">Transparent billing and audit-ready documentation for every single transaction.</p>
-                    </div>
-                    <div class="bg-[#fafafa] p-8 rounded-2xl border border-gray-100 relative overflow-hidden group hover:border-brand-red transition-all">
-                        <span class="text-5xl font-black text-gray-200/50 absolute right-4 -bottom-2 group-hover:text-brand-red/10 transition-all">02</span>
-                        <h4 class="font-black text-gray-900 text-lg mb-2 uppercase">Tailored Logistics</h4>
-                        <p class="text-sm text-gray-500">Customized supply chains built around your specific retail or office needs.</p>
-                    </div>
-                    <div class="bg-[#fafafa] p-8 rounded-2xl border border-gray-100 relative overflow-hidden group hover:border-brand-red transition-all">
-                        <span class="text-5xl font-black text-gray-200/50 absolute right-4 -bottom-2 group-hover:text-brand-red/10 transition-all">03</span>
-                        <h4 class="font-black text-gray-900 text-lg mb-2 uppercase">Expert Oversight</h4>
-                        <p class="text-sm text-gray-500">Professional administrative management led by experienced industry experts.</p>
+                <div class="relative">
+                    <div class="grid gap-4">
+                        <div class="bg-[#fafafa] p-8 rounded-2xl border border-gray-100 relative overflow-hidden group hover:border-brand-red transition-all">
+                            <span class="text-5xl font-black text-gray-200/50 absolute right-4 -bottom-2 group-hover:text-brand-red/10 transition-all">01</span>
+                            <h4 class="font-black text-gray-900 text-lg mb-2 uppercase">Financial Integrity</h4>
+                            <p class="text-sm text-gray-500">Transparent billing and audit-ready documentation for every single transaction.</p>
+                        </div>
+                        <div class="bg-[#fafafa] p-8 rounded-2xl border border-gray-100 relative overflow-hidden group hover:border-brand-red transition-all">
+                            <span class="text-5xl font-black text-gray-200/50 absolute right-4 -bottom-2 group-hover:text-brand-red/10 transition-all">02</span>
+                            <h4 class="font-black text-gray-900 text-lg mb-2 uppercase">Tailored Logistics</h4>
+                            <p class="text-sm text-gray-500">Customized supply chains built around your specific retail or office needs.</p>
+                        </div>
+                        <div class="bg-[#fafafa] p-8 rounded-2xl border border-gray-100 relative overflow-hidden group hover:border-brand-red transition-all">
+                            <span class="text-5xl font-black text-gray-200/50 absolute right-4 -bottom-2 group-hover:text-brand-red/10 transition-all">03</span>
+                            <h4 class="font-black text-gray-900 text-lg mb-2 uppercase">Expert Oversight</h4>
+                            <p class="text-sm text-gray-500">Professional administrative management led by experienced industry experts.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
             </div>
         </div>
@@ -338,23 +353,25 @@
                 </div>
             </div>
             <div class="lg:w-2/3 bg-[#fcfcfc] p-8 md:p-12 rounded-[40px] border border-gray-100">
-    <form id="contact-form" class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-        
-        <input type="text" name="from_name" placeholder="NAME" required 
-            class="bg-white border border-gray-200 p-4 rounded-xl outline-none focus:border-brand-red transition text-xs font-bold w-full">
-        
-        <input type="email" name="reply_to" placeholder="EMAIL" required 
-            class="bg-white border border-gray-200 p-4 rounded-xl outline-none focus:border-brand-red transition text-xs font-bold">
-        
-        <textarea name="message" rows="4" placeholder="MESSAGE" required 
-            class="md:col-span-2 bg-white border border-gray-200 p-4 rounded-xl outline-none focus:border-brand-red transition text-xs font-bold"></textarea>
-        
-        <button type="submit" id="submit-btn" 
-            class="md:col-span-2 btn-main py-5 rounded-xl font-black text-sm uppercase w-full">
-            Secure Consultation
-        </button>
-    </form>
-</div>
+                <form id="contact-form" class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                    
+                    <!-- ACCESSIBILITY FIX: Added aria-labels -->
+                    <input type="text" name="from_name" placeholder="NAME" aria-label="Name" required 
+                        class="bg-white border border-gray-200 p-4 rounded-xl outline-none focus:border-brand-red transition text-xs font-bold w-full">
+                    
+                    <input type="email" name="reply_to" placeholder="EMAIL" aria-label="Email" required 
+                        class="bg-white border border-gray-200 p-4 rounded-xl outline-none focus:border-brand-red transition text-xs font-bold">
+                    
+                    <textarea name="message" rows="4" placeholder="MESSAGE" aria-label="Message" required 
+                        class="md:col-span-2 bg-white border border-gray-200 p-4 rounded-xl outline-none focus:border-brand-red transition text-xs font-bold"></textarea>
+                    
+                    <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off">
+
+                    <button type="submit" id="submit-btn" 
+                        class="md:col-span-2 btn-main py-5 rounded-xl font-black text-sm uppercase w-full">
+                        Secure Consultation
+                    </button>
+                </form>
             </div>
         </div>
     </section>
@@ -370,17 +387,19 @@
                         Empowering businesses with strategic brand growth, reliable delivery networks, and uncompromising integrity across Kenya.
                     </p>
                      <div class="flex gap-4 text-slate-400 text-xl">
-                        <a href="#" class="hover:text-brass transition-colors"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="hover:text-brass transition-colors"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="hover:text-brass transition-colors"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="hover:text-brass transition-colors"><i class="fab fa-instagram"></i></a>
+                        <!-- ACCESSIBILITY FIX: Added aria-labels for social icons -->
+                        <a href="https://www.linkedin.com/company/barmae-enterprise-ltd/?viewAsMember=true" class="hover:text-brand-red transition-colors" aria-label="Visit our LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/barmaenterprise?s=21" class="hover:text-brand-red transition-colors" aria-label="Visit our Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61573239758966" class="hover:text-brand-red transition-colors" aria-label="Visit our Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/barmaeenterpriseltd?igsh=a2ppbnQ0NnU3bnhk" class="hover:text-brand-red transition-colors" aria-label="Visit our Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@barmaeenterpriseltd?_r=1&_t=ZS-95aCzGqLJnI" class="hover:text-brand-red transition-colors" aria-label="Visit our TikTok"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
                 <div>
                     <h4 class="font-bold mb-6 text-sm uppercase text-brand-red tracking-widest">Our Services</h4>
                     <ul class="text-gray-500 text-xs space-y-4 font-bold uppercase tracking-tighter">
                         <li><a href="#services" class="hover:text-brand-red transition">Brand Marketing</a></li>
-                        <li><a href="#services" class="hover:text-brand-red transition">logistics</a></li>
+                        <li><a href="#services" class="hover:text-brand-red transition">Logistics</a></li>
                         <li><a href="#services" class="hover:text-brand-red transition">Business Advisory</a></li>
                     </ul>
                 </div>
@@ -393,8 +412,8 @@
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-gray-100 pt-8 flex flex-col md:row justify-between items-center text-[10px] text-gray-400 font-bold uppercase tracking-widest text-center">
-                <p>© 2026 BARMAE ENTERPRISE LTD. All rights reserved.</p>
+            <div class="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-gray-400 font-bold uppercase tracking-widest text-center">
+                <p>© <span id="year"></span> BARMAE ENTERPRISE LTD. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -402,39 +421,44 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
     <script type="text/javascript">
+    document.getElementById("year").textContent = new Date().getFullYear();
+
     (function() {
-    // 1. Paste your Public Key from the Account tab here
-    emailjs.init("eislqc4HHom2Sy7lw"); 
-  })();
+        emailjs.init("eislqc4HHom2Sy7lw"); 
+    })();
 
-  window.onload = function() {
-    const contactForm = document.getElementById('contact-form');
-    const submitBtn = document.getElementById('submit-btn');
+    window.onload = function() {
+        const contactForm = document.getElementById('contact-form');
+        const submitBtn = document.getElementById('submit-btn');
 
-    if (contactForm) {
-      contactForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-        
-        // Disable button to prevent double-sending
-        submitBtn.innerText = 'SENDING...';
-        submitBtn.disabled = true;
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault();
 
-        // 2. Service ID is service_1yxznyg (from your screenshot)
-        // 3. Paste your Template ID here
-        emailjs.sendForm('service_1yxznyg', 'template_wbxe7pe', this)
-          .then(function() {
-            alert('Success! BARMAE ENTERPRISE LTD has received your message.');
-            submitBtn.innerText = 'SECURE CONSULTATION';
-            submitBtn.disabled = false;
-            contactForm.reset(); 
-          }, function(error) {
-            alert('Submission failed. Please check your connection or use WhatsApp.');
-            submitBtn.innerText = 'SECURE CONSULTATION';
-            submitBtn.disabled = false;
-            console.error('EmailJS Error:', error);
-          });
-         });
-     }
+                const honeypot = contactForm.elements['_gotcha'].value;
+                if (honeypot) {
+                    alert('Success! BARMAE ENTERPRISE LTD has received your message.');
+                    contactForm.reset();
+                    return;
+                }
+                
+                submitBtn.innerText = 'SENDING...';
+                submitBtn.disabled = true;
+
+                emailjs.sendForm('service_1yxznyg', 'template_wbxe7pe', this)
+                .then(function() {
+                    alert('Success! BARMAE ENTERPRISE LTD has received your message.');
+                    submitBtn.innerText = 'SECURE CONSULTATION';
+                    submitBtn.disabled = false;
+                    contactForm.reset(); 
+                }, function(error) {
+                    alert('Submission failed. Please check your connection or use WhatsApp.');
+                    submitBtn.innerText = 'SECURE CONSULTATION';
+                    submitBtn.disabled = false;
+                    console.error('EmailJS Error:', error);
+                });
+            });
+        }
     }
     </script>
 </body>
